@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 
 import Navbar from "./components/Navbar";
 import ErrorBoundary from "./components/ErrorBoundary";
@@ -19,13 +19,11 @@ import "./App.css";
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <ErrorBoundary>
-
         <Navbar />
 
         <Routes>
-
           <Route
             path="/"
             element={<Home />}
@@ -78,11 +76,9 @@ function App() {
               </h1>
             }
           />
-
         </Routes>
-
       </ErrorBoundary>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
